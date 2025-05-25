@@ -26,7 +26,19 @@ Este é um sistema web para cadastro, consulta, atualização e remoção de ve�
 - RESTful API
 - HTML/CSS/JS (frontend separado)
 
+- LINK PARA O FRONTEND: https://github.com/peedro-lucas/front-end
+
 ---
+
+| Método | Rota               | Descrição                                    |
+| ------ | ------------------ | ---------------------------------------------|
+| GET    | `/veiculos`        | Lista todos os veículos                      |
+| GET    | `/veiculos/{id}`   | Busca veículo por ID                         |
+| GET    | `/veiculos/filtro` | Filtra por `tipo`,`fabricante` ,`cor`, `ano` |
+| POST   | `/veiculos`        | Cria um novo veículo                         |
+| PUT    | `/veiculos/{id}`   | Atualiza um veículo existente                |
+| DELETE | `/veiculos/{id}`   | Remove um veículo                            |
+
 
 ## 🧩 Modelagem do Banco de Dados
 
@@ -51,3 +63,5 @@ CREATE TABLE moto (
   veiculo_id INTEGER PRIMARY KEY REFERENCES veiculo(id) ON DELETE CASCADE,
   cilindrada INTEGER NOT NULL
 );
+```
+
